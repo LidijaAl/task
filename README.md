@@ -26,7 +26,7 @@
 
 ### Links
 
-- Live Site URL: [https://lidijaal.github.io/task/](https://lidijaal.github.io/task/)
+- Live Site URL: [https://lidijamarinkovictask.netlify.app](https://lidijamarinkovictask.netlify.app)
 
 
 
