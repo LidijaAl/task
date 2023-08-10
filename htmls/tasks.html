@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="images\icon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/tasks.css" />
+    <script src="/js/tasks.js" defer></script>
+    <title>task. | Tasks</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--NAVIGATION-->
+      <nav>
+        <div class="logo">
+          <a href="/index.html" id="logo">task.</a>
+        </div>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <ul class="navigation">
+          <li><a href="employees.html">EMPLOYEES</a></li>
+          <li><a href="teams.html">TEAMS</a></li>
+          <li><a href="tasks.html">TASKS</a></li>
+          <li><a href="statistics.html">STATISTICS</a></li>
+        </ul>
+      </nav>
+
+      <!--ADD TASK MODAL-->
+
+      <div id="add-modal">
+        <div class="add-modal-content">
+          <div id="close-add-modal">
+            <i class="fa fa-close fa-2x" style="color: #f16350"></i>
+          </div>
+          <form action="" id="addForm" name="addForm">
+            <h2>ADD TASK</h2>
+            <div class="add-form-part">
+              <input
+                class="addInput"
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Title"
+              />
+              <p class="add-error">Please enter a title</p>
+            </div>
+            <div class="add-form-part">
+              <input
+                class="addInput"
+                type="text"
+                id="description"
+                name="description"
+                placeholder="Description"
+              />
+              <p class="add-error">Please enter a description</p>
+            </div>
+
+            <div class="add-form-part" id="chooseAssignee">
+              <div class="choose">
+                <p>Assign to:</p>
+                <div id="assignBtn">Choose assignee</div>
+              </div>
+              <div id="chosenAssignee"></div>
+            </div>
+
+            <div class="add-form-part">
+              <input class="addInput" type="date" id="date" name="date" />
+              <p class="add-error">Please enter a valid due date</p>
+            </div>
+          </form>
+
+          <div class="add-buttons">
+            <div id="addBtn">Done</div>
+            <div id="addCancelBtn">Cancel</div>
+          </div>
+          <p id="add-error-message">Please fill out the form</p>
+        </div>
+      </div>
+
+      <!--EDIT MODAL-->
+      <div id="edit-modal">
+        <div class="edit-modal-content">
+          <div id="close-edit-modal">
+            <i class="fa fa-close fa-2x" style="color: #f16350"></i>
+          </div>
+          <form action="" id="editForm" name="editForm">
+            <h2>EDIT TASK</h2>
+            <div class="edit-form-part">
+              <input
+                class="editInput"
+                type="text"
+                id="editTitle"
+                name="title"
+                placeholder="Title"
+              />
+              <p class="edit-error">Please enter a title</p>
+            </div>
+            <div class="edit-form-part">
+              <input
+                class="editInput"
+                type="text"
+                id="editDescription"
+                name="editDescription"
+                placeholder="Description"
+              />
+              <p class="edit-error">Please enter a description</p>
+            </div>
+
+            <div class="edit-form-part" id="editChooseAssignee">
+              <div class="edit-choose">
+                <p>Assign to:</p>
+                <div id="editAssignBtn">Choose assignee</div>
+              </div>
+              <div id="editChosenAssignee">
+                <div id="editContainer">
+                  <div id="editContImage">
+                    <img id="editContImageImg" src="" />
+                  </div>
+                  <div id="editContName"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="edit-form-part">
+              <input
+                class="editInput"
+                type="date"
+                id="editDate"
+                name="editDate"
+              />
+              <p class="edit-error">Please enter a valid due date</p>
+            </div>
+          </form>
+
+          <div class="edit-buttons">
+            <div id="editBtn">Done</div>
+            <div id="editCancelBtn">Cancel</div>
+          </div>
+          <p id="edit-error-message">Please fill out the form</p>
+        </div>
+      </div>
+      <!--REMOVE MODAL-->
+      <div id="remove-modal">
+        <div class="remove-modal-content">
+          <div id="close-remove-modal">
+            <i class="fa fa-close fa-lg"></i>
+          </div>
+          <h2>Are you sure you want to delete this task?</h2>
+          <div class="remove-buttons">
+            <div id="removeYesBtn">Yes</div>
+            <div id="removeNoBtn">No</div>
+          </div>
+        </div>
+      </div>
+
+      <!--TASKS-->
+      <main class="tasks-wrapper">
+        <h2>TASKS</h2>
+        <div id="addNewBtn" class="add">+ ADD NEW</div>
+        <div id="tasks-container">
+          <div id="tasks"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

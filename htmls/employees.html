@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=empice-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="images\icon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/employees.css" />
+    <script src="../js/employees.js" defer></script>
+    <title>task. | Employees</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--NAVIGATION-->
+      <nav>
+        <div class="logo">
+          <a href="../index.html" id="logo">task.</a>
+        </div>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <ul class="navigation">
+          <li><a href="employees.html">EMPLOYEES</a></li>
+          <li><a href="teams.html">TEAMS</a></li>
+          <li><a href="tasks.html">TASKS</a></li>
+          <li><a href="statistics.html">STATISTICS</a></li>
+        </ul>
+      </nav>
+
+      <!--ADD EMPLOYEES MODAL-->
+
+      <div id="add-modal">
+        <div class="add-modal-content">
+          <div id="close-add-modal">
+            <i class="fa fa-close fa-2x" style="color: #f16350"></i>
+          </div>
+          <form action="" id="addForm" name="addForm">
+            <div class="add-form-img">
+              <div class="img-form">
+                <img
+                  src="images/avatar.jpg"
+                  alt="employee-image"
+                  id="addImagePreview"
+                />
+                <input type="file" id="add-img-file" name="add-img-file" />
+                <p id="add-error-img">
+                  File size is greater than 2MB. Please upload file below 2MB.
+                </p>
+              </div>
+            </div>
+            <div class="add-form-part">
+              <input
+                class="addInput"
+                type="text"
+                id="empName"
+                name="empName"
+                placeholder="Full Name"
+              />
+              <p class="add-error">Please enter a name</p>
+            </div>
+            <div class="add-form-part">
+              <input class="addInput" type="date" id="birth" name="birth" />
+              <p class="add-error">Please choose a date of birth</p>
+            </div>
+            <div class="add-form-part">
+              <input
+                class="addInput"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+                autocomplete="email"
+              />
+              <p class="add-error">Please enter a valid email</p>
+            </div>
+            <div class="add-form-part">
+              <input
+                class="addInput"
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Phone number"
+              />
+              <p class="add-error">Please enter a valid phone number</p>
+            </div>
+            <div class="add-form-part">
+              <input
+                class="addInput"
+                type="number"
+                id="salary"
+                name="salary"
+                placeholder="Monthly salary"
+              />
+              <p class="add-error">Please enter a monthly salary</p>
+            </div>
+            <div class="add-form-part">
+              <select name="team" id="team">
+                <option value="select" id="select">Select a team</option>
+                <option value="engineering" id="engineering">
+                  Engineering
+                </option>
+                <option value="design" id="design">Design</option>
+                <option value="product" id="product">Product</option>
+              </select>
+              <p class="add-error" id="addTeamErrorP">Please choose a team</p>
+            </div>
+          </form>
+
+          <div class="add-buttons">
+            <div id="addBtn">Done</div>
+            <div id="addCancelBtn">Cancel</div>
+          </div>
+          <p id="add-error-message">Please fill out the form</p>
+        </div>
+      </div>
+
+      <!---EDIT EMLPOYEES MODAL-->
+
+      <div id="edit-modal">
+        <div class="edit-modal-content">
+          <div id="close-edit-modal">
+            <i class="fa fa-close fa-2x" style="color: #f16350"></i>
+          </div>
+          <form action="" id="editForm" name="editForm">
+            <div class="edit-form-img">
+              <div class="img-form">
+                <img
+                  src="images\avatar.jpg"
+                  alt="employee-image"
+                  id="editImagePreview"
+                />
+                <input type="file" id="edit-img-file" name="edit-img-file" />
+                <p id="edit-error-img">
+                  File size is greater than 2MB. Please upload file below 2MB.
+                </p>
+              </div>
+            </div>
+            <div class="edit-form-part">
+              <input
+                class="editInput"
+                type="text"
+                id="editName"
+                name="editName"
+                placeholder="First Name"
+              />
+              <p class="edit-error">Please enter a name</p>
+            </div>
+            <div class="edit-form-part">
+              <input
+                class="editInput"
+                type="date"
+                id="editBirth"
+                name="editBirth"
+              />
+              <p class="edit-error">Please enter a date of birth</p>
+            </div>
+            <div class="edit-form-part">
+              <input
+                class="editInput"
+                type="email"
+                id="editEmail"
+                name="editEmail"
+                placeholder="Email Address"
+                autocomplete="email"
+              />
+              <p class="edit-error">Please enter a valid email</p>
+            </div>
+            <div class="edit-form-part">
+              <input
+                class="editInput"
+                type="tel"
+                id="editPhone"
+                name="editPhone"
+                placeholder="Phone number"
+              />
+              <p class="edit-error">Please enter a valid phone number</p>
+            </div>
+            <div class="edit-form-part">
+              <input
+                class="editInput"
+                type="text"
+                id="editSalary"
+                name="editSalary"
+                placeholder="Monthly salary"
+              />
+              <p class="edit-error">Please enter a monthly salary</p>
+            </div>
+            <div class="edit-form-part">
+              <select name="editTeam" id="editTeam">
+                <option value="select" id="select">Select a team</option>
+                <option value="ENGINEERING" id="editEngineering">
+                  Engineering
+                </option>
+                <option value="DESIGN" id="editDesign">Design</option>
+                <option value="PRODUCT" id="editProduct">Product</option>
+              </select>
+              <p class="edit-error" id="editTeamErrorP">Please choose a team</p>
+            </div>
+          </form>
+
+          <div class="edit-buttons">
+            <div id="editBtn">Done</div>
+            <div id="editCancelBtn">Cancel</div>
+          </div>
+          <p id="edit-error-message">Please fill out the form</p>
+        </div>
+      </div>
+
+      <!--REMOVE EMPLOYEE MODAL-->
+      <div id="remove-modal">
+        <div class="remove-modal-content">
+          <div id="close-remove-modal">
+            <i class="fa fa-close fa-lg"></i>
+          </div>
+          <h2>
+            Are you sure you want to delete <span id="removeName"></span>?
+          </h2>
+          <div class="remove-buttons">
+            <div id="removeYesBtn">Yes</div>
+            <div id="removeNoBtn">No</div>
+          </div>
+        </div>
+      </div>
+
+      <!--EMPLOYEES-->
+      <main class="employees-wrapper">
+        <h2>EMPLOYEES</h2>
+        <div id="addNewBtn" class="add">+ ADD NEW</div>
+        <div id="employees-container">
+          <div id="employees"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

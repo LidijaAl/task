@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/teams.css" />
+    <link rel="shortcut icon" href="images\icon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../js/teams.js" defer></script>
+    <title>task. | Teams</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--NAVIGATION-->
+      <nav>
+        <div class="logo">
+          <a href="../index.html" id="logo">task.</a>
+        </div>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <ul class="navigation">
+          <li><a href="employees.html">EMPLOYEES</a></li>
+          <li><a href="teams.html">TEAMS</a></li>
+          <li><a href="tasks.html">TASKS</a></li>
+          <li><a href="statistics.html">STATISTICS</a></li>
+        </ul>
+      </nav>
+
+      <!--TEAMS NAVIGATION-->
+      <div class="team-wrapper">
+        <div class="team-navigation">
+          <div id="engineeringBtn">ENGINEERING TEAM</div>
+          <div id="designBtn">DESIGN TEAM</div>
+          <div id="productBtn">PRODUCT TEAM</div>
+        </div>
+        <!--LANDING-->
+        <div class="landing" id="landing">
+          <div class="landing-image">
+            <object data="images/team.svg"></object>
+          </div>
+        </div>
+        <!--TEAMS SELECTION-->
+        <div class="selected-team" id="eng-team">
+          <h2>ENGINEERING TEAM</h2>
+          <div class="team-container" id="engineering-container"></div>
+        </div>
+        <div class="selected-team" id="des-team">
+          <h2>DESIGN TEAM</h2>
+          <div class="team-container" id="design-container"></div>
+        </div>
+        <div class="selected-team" id="pro-team">
+          <h2>PRODUCT TEAM</h2>
+          <div class="team-container" id="product-container"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
